@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Created-By: Maven WAR Plugin 3.3.2
+Build-Jdk-Spec: 17
+Specification-Title: Alfresco Share WAR
+Specification-Vendor: Alfresco Software
+Implementation-Title: Alfresco Share WAR
+Implementation-Vendor: Alfresco Software
+Build-Date: 2025-10-28T04:35:11Z
+Build-Number: 
+Implementation-Version: 25.3.0.37-SNAPSHOT
+Specification-Version: 25.3.0
+
+Name: Share Libraries
+yui: 2.9.0-alfresco-20141223
+freemarker: 2.3.30-jakarta-1
+surf: 10.1
+webscripts: 10.2
+aikau: 1.1.4
+rhino: 1.7.12
+spring: 6.2.8
+alfresco-core: 25.3.0.62
+alfresco-jlan: 7.1
+

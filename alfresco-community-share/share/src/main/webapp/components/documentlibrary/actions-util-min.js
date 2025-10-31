@@ -1,0 +1,1 @@
+(function(){var a=YAHOO.util.Event;var c=Alfresco.util.combinePaths,b=Alfresco.util.relativeTime;YAHOO.lang.augmentObject(Alfresco.util,{},true)})();
