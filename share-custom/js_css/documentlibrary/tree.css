@@ -1,6 +1,9 @@
-.treeview {
-   background-color: burlywood;
-   margin-right: 5px;
+.sticky-wrapper h2
+{
+   font-size: 20px;
+   height: 7vh;
+   line-height: 7vh;
+   width: 12vw;
 }
 
 .treeview .tree {
@@ -30,12 +33,6 @@
    background: none;
    color: #000;
    white-space: nowrap;
-}
-
-.treeview .selected {
-   background: linear-gradient(90deg, #6a11cb, #2575fc) !important;
-   color: #00ff59 !important;
-   border-radius: 4px;
 }
 
 .treeview .ygtvtable {

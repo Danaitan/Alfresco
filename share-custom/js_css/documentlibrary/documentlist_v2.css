@@ -1,6 +1,5 @@
 .doclist
 {
-   background-color: #ee24f5;
    clear: both;
    /* visibility: hidden; */
 }
@@ -338,15 +337,6 @@
 body .doclist tr.yui-dt-highlighted
 {
    cursor: auto;
-}
-
-.doclist tr.yui-dt-even
-{
-   background-color: #09eaff;
-}
-.doclist tr.yui-dt-odd
-{
-   background-color: #f97c7c;
 }
 
 .doclist tr.yui-dt-odd.yui-dt-highlighted td.yui-dt-last,
@@ -746,14 +736,14 @@ body .doclist tr.yui-dt-highlighted
 
 .docListInstructions
 {
-   background-color: rgb(41, 175, 124);
+   background-color: rgb(255, 255, 255);
    color: #515D6B;
    padding: 10px;
 }
 
 .docListInstructionsWithDND
 {
-   background-color: rgb(195, 19, 19);
+   background-color: rgb(231, 231, 231);
    border: 1px dashed #73B4DA;
    color: #515D6B;
    padding: 10px;

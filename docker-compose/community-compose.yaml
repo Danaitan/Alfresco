@@ -162,25 +162,17 @@ services:
       - share-war:/usr/local/tomcat/webapps/share.war
       #region messages
       - ../share-custom/messages/slingshot_en.properties:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/messages/slingshot_en.properties:cached
+      - ../share-custom/messages/slingshot_th.properties:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/messages/slingshot_th.properties:cached
       #endregion
 
-      #region Login
+      #region js_css
+      - ../share-custom/js_css/document-details/path.css:/usr/local/tomcat/webapps/share/components/document-details/path.css:cached
+
       - ../share-custom/js_css/login/login.css:/usr/local/tomcat/webapps/share/components/guest/login.css:cached
       - ../share-custom/js_css/login/login.js:/usr/local/tomcat/webapps/share/components/guest/login.js:cached
       - ../share-custom/js_css/login/login-min.js:/usr/local/tomcat/webapps/share/components/guest/login-min.js:cached
-      #endregion
-
-      #region dashboard
       - ../share-custom/js_css/dashboard:/usr/local/tomcat/webapps/share/components/dashboard:cached
-      #endregion
-
-      #region My Files
       - ../share-custom/js_css/documentlibrary:/usr/local/tomcat/webapps/share/components/documentlibrary:cached
-      #endregion
-
-      - ../share-custom/js_css/document-details/path.css:/usr/local/tomcat/webapps/share/components/document-details/path.css:cached
-
-
       - ../share-custom/js_css/admin:/usr/local/tomcat/webapps/share/components/admin:cached
       - ../share-custom/js_css/blog:/usr/local/tomcat/webapps/share/components/blog:cached
       - ../share-custom/js_css/calendar:/usr/local/tomcat/webapps/share/components/calendar:cached
@@ -224,10 +216,64 @@ services:
       - ../share-custom/js_css/upload:/usr/local/tomcat/webapps/share/components/upload:cached
       - ../share-custom/js_css/wiki:/usr/local/tomcat/webapps/share/components/wiki:cached
       - ../share-custom/js_css/workflow:/usr/local/tomcat/webapps/share/components/workflow:cached
-
+      #endregion
+      
+      #region Themes
       - ../share-custom/themes:/usr/local/tomcat/webapps/share/themes:cached
+      #endregion
 
-      - ../share-custom/pages/login.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/guest/login.get.html.ftl:cached
+      #region Pages
+      #region login
+      - ../share-custom/pages/login/login.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/guest/login.get.html.ftl:cached
+      #endregion
+      
+      #region admin
+      - ../share-custom/pages/admin/edit-tag.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/admin/edit-tag.get.html.ftl:cached
+      - ../share-custom/pages/admin/edit-tag.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/admin/edit-tag.get.js:cached
+      - ../share-custom/pages/admin/replication-job.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/admin/replication-job.get.html.ftl:cached
+      - ../share-custom/pages/admin/replication-job.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/admin/replication-job.get.js:cached
+      #endregion
+
+      # region my-documentlibraries
+      - ../share-custom/pages/my-documentlibraries/my-doclibs.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/my-documentlibraries/my-doclibs.get.js:cached
+      - ../share-custom/pages/my-documentlibraries/my-doclibs.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/my-documentlibraries/replication-job.get.js:cached
+      #endregion
+
+      #region documentlibrary
+      - ../share-custom/pages/documentlibrary/actions-common.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/actions-common.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/actions-common.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/actions-common.get.js:cached
+      - ../share-custom/pages/documentlibrary/categories.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/categories.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/categories.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/categories.get.js:cached
+      - ../share-custom/pages/documentlibrary/doclib-custom.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/doclib-custom.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/doclib-custom.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/doclib-custom.get.js:cached
+      - ../share-custom/pages/documentlibrary/documentlist.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/documentlist.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/feed.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/feed.get.js:cached
+      - ../share-custom/pages/documentlibrary/filter.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/filter.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/myfiles-tree.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/myfiles-tree.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/myfiles-tree.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/myfiles-tree.get.js:cached
+      - ../share-custom/pages/documentlibrary/myfiles.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/myfiles.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/repo-filter.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/repo-filter.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/repo-toolbar.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/repo-toolbar.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/repo-tree.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/repo-tree.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/repo-tree.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/repo-tree.get.js:cached
+      - ../share-custom/pages/documentlibrary/repo.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/repo.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/sharedfiles-tree.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/sharedfiles-tree.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/sharedfiles-tree.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/sharedfiles-tree.get.js:cached
+      - ../share-custom/pages/documentlibrary/sharedfiles.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/sharedfiles.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/toolbar.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/toolbar.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/tree.get.html.ftl:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/tree.get.html.ftl:cached
+      - ../share-custom/pages/documentlibrary/tree.get.js:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/tree.get.js:cached
+
+      - ../share-custom/pages/documentlibrary/data:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/data:cached
+      - ../share-custom/pages/documentlibrary/forms:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/forms.get.js:cached
+      - ../share-custom/pages/documentlibrary/include:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/documentlibrary/include:cached
+      #endregion
+
+      #region form
+      - ../share-custom/pages/from/form.dependencies.inc:/usr/local/tomcat/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/components/from/form.dependencies.inc:cached
+      #endregion
+      
+      #endregion
 
 
     depends_on:

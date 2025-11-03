@@ -1043,12 +1043,12 @@ body.yui-skin-yellowTheme .yui-columnbrowser .yui-carousel-content li.yui-column
 
 .alfresco-twister-open
 {
-   background: transparent url(images/expanded.png) no-repeat scroll 0 50%;
+   background: transparent url(images/expanded.png) no-repeat scroll right 50%;
 }
 
 .alfresco-twister-closed
 {
-   background: transparent url(images/collapsed.png) no-repeat scroll 0 50% !important;
+   background: transparent url(images/collapsed.png) no-repeat scroll right 50% !important;
 }
 
 /* Preview Tooltip */

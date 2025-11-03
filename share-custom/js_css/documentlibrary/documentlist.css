@@ -667,7 +667,7 @@ body .doclist tr.yui-dt-highlighted
 
 .docListInstructionsWithDND
 {
-   background-color: white;
+   background-color: rgb(255, 255, 255);
    border: 1px dashed #73B4DA;
    color: #515D6B;
    padding: 10px;

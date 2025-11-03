@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <alfresco-config>
+    <config evaluator="string-compare" condition="Dashboard">
+        <default-dashboard-url>/page/context/mine/myfiles</default-dashboard-url>
+    </config>
+</alfresco-config> -->
+
+<alfresco-config></alfresco-config>

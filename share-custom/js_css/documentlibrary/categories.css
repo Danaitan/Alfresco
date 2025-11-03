@@ -1,8 +1,10 @@
-.categoryview
+/* .categoryview 
 {
    font-size: 14px;
-   background-color: #f58080;
-}
+   height: 7vh;
+   line-height: 7vh;
+   border-radius: 10px;
+} */
 .categoryview .tree
 {
    display: none;
@@ -22,7 +24,7 @@
 
 .categoryview .ygtvitem
 {
-   background-color: #ec0c0c;
+   background-color: #ffffff;
    overflow-x: hidden;
 }
 
